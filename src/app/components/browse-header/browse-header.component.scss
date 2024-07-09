@@ -1,0 +1,26 @@
+.group:hover .dropdown-content {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .dropdown-content {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .hideUl{
+    display: none;
+  }
+
+  .group:hover{
+    .hideUl{
+      display: block;
+    }
+  }
+
+  // .hideUl:hover{
+  //   display: block;
+  // }
+  // li:hover{
+  //   display: block;
+  // }

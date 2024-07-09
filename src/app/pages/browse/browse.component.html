@@ -1,0 +1,12 @@
+<!-- <app-browse-header></app-browse-header> -->
+
+
+<app-banner [bannerOverview]="(bannerDetail$ |async)?.overview" [bannerTitle]="(bannerDetail$ | async)?.original_title"  [key]="(bannerVideo$ |async)?.results[1].key"  />
+
+
+<app-movie-carusel [videoContent]="movies" [title]="'Popular in Netflix '"></app-movie-carusel>
+<app-movie-carusel [videoContent]="topRatedMovies" [title]="'Top Rated Movies'"></app-movie-carusel>
+<app-movie-carusel [videoContent]="upcomingMovies" [title]="'Upcoming Movies'"></app-movie-carusel>
+<app-movie-carusel [videoContent]="popularMovies" [title]="'Popular Movies'"></app-movie-carusel>
+<app-movie-carusel [videoContent]="nowPlayingMovies" [title]="'Now Playing Movies'"></app-movie-carusel>
+<app-movie-carusel [videoContent]="tvShows" [title]="'TV Shows'"></app-movie-carusel>

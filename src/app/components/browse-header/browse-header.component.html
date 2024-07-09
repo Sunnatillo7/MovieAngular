@@ -1,0 +1,93 @@
+<header class="h-[68px] z-10 bg-gray-900  sticky top-0 flex items-center justify-between px-10">
+    <!-- Logo nav item -->
+    <div class="flex gap-10">
+        <img width="110" [src]="logo" alt="logo">
+        <!-- @for (item of navList; track $index) {
+        <ul class="flex items-center">
+            <li (click)="goToPages(item)" class="text-neutral-200 cursor-pointer font-extralight text-sm hover:text-gray-400 transition-[1s]">
+                {{item}}
+            </li>
+
+        </ul>
+        } -->
+
+
+        <div class="relative group ">
+            <button
+                class="  px-6 py-3 font-semibold text-white bg-gray-900 rounded-lg shadow-lg hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+                Movies
+            </button>
+            <ul
+                class="absolute   left-0 z-10 mt-2 overflow-hidden bg-white border border-gray-200 rounded-lg shadow-lg dropdown-content">
+                @for (item of moviesType; track $index) {
+
+                <li (click)="movieTypeClick(item)"  class="px-6 py-3 text-gray-700 hover:bg-gray-400 hover:text-white cursor-pointer">{{item}}</li>
+                }
+
+            </ul>
+        </div>
+        <div class="relative group  ">
+            <button
+                class="px-6 py-3 font-semibold text-white bg-gray-900 rounded-lg shadow-lg hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+                TV Shows
+            </button>
+            <ul
+                class="absolute  left-0 z-10 mt-2 overflow-hidden bg-white border border-gray-200 rounded-lg shadow-lg dropdown-content">
+                @for (item of tvShowsType; track $index) {
+
+                <li (click)="movieTypeClick(item)" class="px-6 py-3 text-gray-700 hover:bg-gray-400 hover:text-white ">{{item}}</li>
+                }
+
+            </ul>
+        </div>
+        <div class="relative group">
+            <button
+                class="px-6 py-3 font-semibold text-white bg-gray-900 rounded-lg shadow-lg hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+                People
+            </button>
+            <ul
+                class="absolute  left-0 z-10 mt-2 overflow-hidden bg-white border border-gray-200 rounded-lg shadow-lg dropdown-content">
+                <li class="px-6 py-3 text-gray-700 hover:bg-gray-400 hover:text-white">Popular</li>
+
+            </ul>
+        </div>
+        <div class="relative group">
+            <button
+                class="px-6 py-3 font-semibold text-white bg-gray-900 rounded-lg shadow-lg hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+                More
+            </button>
+            <ul
+                class="absolute  w-[150px] left-0 z-10 mt-2 overflow-hidden bg-white border border-gray-200 rounded-lg shadow-lg dropdown-content">
+                @for (item of moreSectionType; track $index) {
+
+                <li class="px-6 py-3 text-gray-700 hover:bg-gray-400 hover:text-white cursor-pointer">{{item}}</li>
+                }
+
+            </ul>
+        </div>
+
+
+    </div>
+
+
+    <!-- User profile -->
+
+    <div class="text-white flex items-center gap-4">
+        <div class="flex items-center gap-2">
+            <button class="hover:text-gray-400 transition-[1s] ml-2 text-neutral-200" mat-button
+                [matMenuTriggerFor]="menu">Profile</button>
+
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Discussion</button>
+                <button mat-menu-item>Lists</button>
+                <button mat-menu-item>Ratings</button>
+                <button mat-menu-item>Watchlist</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+            <img src="" alt="profile_img">
+        </div>
+        &nbsp; | &nbsp;
+    </div>
+
+</header>

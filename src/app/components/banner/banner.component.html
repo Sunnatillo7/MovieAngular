@@ -1,0 +1,33 @@
+<!-- <iframe class=" aspect-auto absolute w-full h-full top-0"
+        src="https://www.youtube.com/embed/N-PHSldMihI?autoplay=1&mute=1&loop=1&controls=0" frameborder="0"
+        allowfullscreen></iframe>
+
+    <div class="relative z-[1] flex flex-col text-[white] max-w-[600px] pl-8 top-[40%]">
+        <h1 class="text-6xl font-bold"> Title </h1>
+        <p class="text-2xl"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio dolor nobis quam
+            nesciunt sit delectus doloremque enim voluptatem iusto, fuga totam, odit error, maxime nostrum.s</p>
+        <div class="flex gap-8 px-5 py-2.5">
+            <button
+                class="bg-[white] text-[black] font-[bold] text-xl rounded w-[150px] p-3 hover:opacity-70 transition-[1s]">Play</button>
+            <button class="bg-[gray] font-[bold] text-xl rounded w-[150px] p-3 hover:opacity-70 transition-[1s]">More
+                info</button>
+        </div>
+    </div> -->
+
+<iframe class="w-full h-full absolute"
+    [src]="videoUrl" frameborder="0"></iframe>
+
+<div class="h-screen bg-white">
+    <div class="pt-[15%] px-24 absolute h-full text-white bg-gradient-to-r from-black">
+        <h1 class="text-6xl font-bold">{{bannerTitle}}</h1>
+        <p class="inline-block py-6 text-xl w-1/4 flex-wrap">{{bannerOverview}}</p>
+        <div>
+            <button class="bg-white text-black py-4 px-12 text-xl rounded-lg hover:bg-opacity-70 transition-[1s]">
+                ▶️ Play
+            </button>
+            <button class="mx-2 bg-gray-500 text-white px-12 py-4 text-xl bg-opacity-50 rounded-lg">
+                More Info
+            </button>
+        </div>
+    </div>
+</div>
